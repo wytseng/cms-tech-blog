@@ -18,3 +18,30 @@ post
 
 comments 
 -> belongs to user and post
+
+
+-----
+
+- homepage ['/']
+    - displays all blog posts (with post title and date created)
+
+- individual posts ['/post/:id] (can browse but can't comment if not logged in)
+  - includes post title, content, creator's username, date created. 
+  - below is option to leave a comment. 
+  - if a comment is submitted the page will refresh with the updated comment (with content, username, and created date)
+
+- dashboard ['/dashboard'](redirect to login if not logged in)
+  - display all posts that I have created (title) with option to add posts
+
+  - clicking on a post --> edit post ['/dashboard/edit/:id]
+    - can update or delete post 
+  
+  - add w new post --> new post ['/dashboard/new']
+
+- login ['/login']
+    - enter exsiting username and password 
+    - if successful, login session would start 
+
+- signup ['/singup']
+    - enter username and password 
+    - saved and login session will begin 

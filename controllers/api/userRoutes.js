@@ -8,9 +8,11 @@ users.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-    });
+      req.session.userId = newUser.id;
+      req.session.username = newUser.username;
 
-    res.status(200).json(newUser);
+      res.status(200).json(newUser);
+    });
   } catch(err) {
     console.log(err);
     res.status(500).json(err);
@@ -39,9 +41,11 @@ users.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-    });
+      req.session.userId = userData.id;
+      req.session.username = userData.username;
 
-    res.status(200).json({ user: userData, message: "You are now logged in." });
+      res.status(200).json({ user: userData, message: "You are now logged in." });
+    });
   } catch(err) {
     console.log(err);
     res.status(400).json(err);
