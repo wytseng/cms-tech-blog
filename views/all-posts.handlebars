@@ -1,0 +1,11 @@
+<div class="page-wrapper">
+  <h2>All Posts</h2>
+  <div class="container">
+    {{#each posts as |post|}}
+    <a class="blog-container" href="post/{{post.id}}">
+      <p class="post-title">{{post.title}}</p>
+      <p class="post-date">{{format_date post.createdAt}}</p>
+    </a>
+    {{/each}}
+  </div>
+</div>
