@@ -30,6 +30,12 @@ comments
   - below is option to leave a comment. 
   - if a comment is submitted the page will refresh with the updated comment (with content, username, and created date)
 
+- login ['/login']
+    - enter exsiting username and password 
+    - if successful, login session would start 
+
+_____________incomplete____________
+
 - dashboard ['/dashboard'](redirect to login if not logged in)
   - display all posts that I have created (title) with option to add posts
 
@@ -38,10 +44,6 @@ comments
   
   - add w new post --> new post ['/dashboard/new']
 
-- login ['/login']
-    - enter exsiting username and password 
-    - if successful, login session would start 
-
-- signup ['/singup']
+- signup ['/signup']
     - enter username and password 
     - saved and login session will begin 

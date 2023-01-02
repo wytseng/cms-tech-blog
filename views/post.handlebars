@@ -1,11 +1,42 @@
-<p> individual posts</p>
-
 <div class="page-wrapper">
-  <div class="post-container">
+  <div class="container">
+    <div class="section-container">
+      <div class="card-header">
+        <h2 class="post-title">{{post.title}}</h2>
+        <p>posted by {{post.User.username}} at {{format_date post.createdAt}}</p>
+      </div>
+      <div class="post-content">
+        <p>{{post.content}}</p>
+      </div>
+    </div>
 
-  </div>
+    <div class="section-container">
 
-  <div class="comment-container">
-    
+      <div class="card-header">
+        <h2 class="post-title">Comments</h2>
+      </div>
+
+      <div class="comments">
+        {{#each comments as |comment|}}
+        <p><span style="font-weight: bold;">{{comment.User.username}}:</span> {{comment.content}}</p>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="section-container">
+      <div class="card-header">
+        <h3>Add New Comment</h3>
+      </div>
+      <form id="new-comment-form" class="card">
+        <div class="form-body">
+          <input type="hidden" name="post-id" value="{{post.id}}" />
+          <textarea name="comment-body" class="form-input"></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
+  
 </div>
+
+<script src="/js/newComment.js"></script>

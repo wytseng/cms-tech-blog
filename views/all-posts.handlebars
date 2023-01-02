@@ -2,10 +2,12 @@
   <h2>All Posts</h2>
   <div class="container">
     {{#each posts as |post|}}
-    <a class="blog-container" href="post/{{post.id}}">
-      <p class="post-title">{{post.title}}</p>
-      <p class="post-date">{{format_date post.createdAt}}</p>
-    </a>
+    <div class="blog-container">
+      <a class="post-header" href="post/{{post.id}}">
+        <p class="post-title">{{post.title}}</p>
+        <p class="post-date">{{format_date post.createdAt}}</p>
+      </a>
+    </div>
     {{/each}}
   </div>
 </div>
