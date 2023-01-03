@@ -20,8 +20,21 @@ This online application is a tech-related CMS-style blog site where users can vi
 
 ## Installation 
 
+No installation is required. Simply load the website through the given link in the usage section.
+
 ## Usage 
 
+Link to deployed heroku application: https://dry-lake-80135.herokuapp.com/ 
+
+Upon entering the site, you will be brought to the home page where it will display a list of all blog posts on the website. You may look into a specific blog post by simply clicking on the post you would like to view. 
+
+On the specific post page, you will be presented with information on the post and comments under the post as well.
+
+You can created an account through clicking on the sign up link under the login button on the login page. Being logged in will give you access to create, edit, and delete posts, as well as comment on posts.
+
+Note that the website you automatically sign a user out after 10 minutes. 
+
+![techblog demo](/tech-blog-demo.gif)
 
 
 ## License 
