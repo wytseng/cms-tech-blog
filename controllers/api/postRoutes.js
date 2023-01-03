@@ -13,7 +13,7 @@ posts.post('/', withAuth, async(req, res) => {
   }
 });
 
-posts.put('/:id', async (req, res) => {
+posts.put('/:id', withAuth, async (req, res) => {
   try {
     const [rowsAffected] = await Post.update(req.body, { where: { id: req.params.id }});
 
@@ -28,7 +28,7 @@ posts.put('/:id', async (req, res) => {
   }
 });
 
-posts.delete('/:id', async (req, res) => {
+posts.delete('/:id', withAuth, async (req, res) => {
   try {
     const rowsAffected = await Post.destroy({ where: { id: req.params.id }});
 

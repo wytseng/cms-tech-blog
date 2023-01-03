@@ -18,7 +18,7 @@
 
       <div class="comments">
         {{#each comments as |comment|}}
-        <p><span style="font-weight: bold;">{{comment.User.username}}:</span> {{comment.content}}</p>
+        <p><span style="font-weight: bold;">{{comment.User.username}}:</span> {{comment.content}}<span class="comment-date"> ({{format_date comment.createdAt}})</span></p>
         {{/each}}
       </div>
     </div>
@@ -31,7 +31,7 @@
         <div class="form-body">
           <input type="hidden" name="post-id" value="{{post.id}}" />
           <textarea name="comment-body" class="form-input"></textarea>
-          <button type="submit" class="btn">Submit</button>
+          <button type="submit" class="btn">Comment</button>
         </div>
       </form>
     </div>

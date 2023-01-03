@@ -6,6 +6,7 @@ router.get('/', async (req, res) => {
     const postsData = await Post.findAll({ include: User });
 
     const posts = postsData.map((post) => post.get({ plain: true }));
+
     if (req.session.loggedIn) {
       res.render('all-posts', { 
         layout: 'loggedInMain',

@@ -53,8 +53,15 @@ ul {
 .container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+}
+
+.new-post .btn {
+  position: absolute;
+  bottom: 1em;
+  padding: 0.5em 1em;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .blog-container {
@@ -69,6 +76,7 @@ ul {
   color: var(--teal);
   background-color: var(--dark);
   border-radius: 1em;
+  margin-bottom: 0.5em;
 }
 
 .card-header {
@@ -108,6 +116,10 @@ ul {
   padding: 0.5em;
 }
 
+.comment-date {
+  font-style: italic;
+}
+
 .form-body {
   padding: 1em;
 }
@@ -118,23 +130,27 @@ ul {
 
 form {
   padding-top: 1em;
+  width: 85%;
+  margin: auto;
+}
+
+.form-content {
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
 }
 
 label {
   font-family: "Exo 2", sans-serif;
 }
 
-textarea.form-input {
+textarea {
   display: block;
-  min-width: 95%;
   min-height: 5em;
-  padding: 0.5em;
-  margin: auto;
-}
-
-input {
-  width: 15em;
-  padding: 0.5em;  
 }
 
 button.btn {
@@ -145,9 +161,14 @@ button.btn {
   font-size: 1.2em;
   margin: 0.5em;
   padding: 3px 12px;
+  text-align: center;
 }
 
-.signup-link a {
+.alt-link {
+  padding: 0.5em;
+}
+
+.alt-link a {
   font-family: "Exo 2";
   color: var(--purple);
 }

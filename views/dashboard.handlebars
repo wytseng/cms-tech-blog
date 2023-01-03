@@ -1,3 +1,13 @@
-{{#each userPosts as |post|}}
-<p>post name {{post.title}}</p>
-{{/each}}
+<div class="page-wrapper">
+  <h2>My Posts</h2>
+  <div class="container">
+    {{#each posts as |post|}}
+    <div class="blog-container">
+      <a class="post-header" href="/dashboard/edit/{{post.id}}">
+        <p class="post-title">{{post.title}}</p>
+        <p class="post-date">{{format_date post.createdAt}}</p>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+</div>
