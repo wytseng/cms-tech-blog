@@ -1,0 +1,24 @@
+<div class="page-wrapper">
+  <div class="container">
+    <div class="section-container">
+      <div class="card-header">
+        <h2 class="post-title">Edit Post</h2>
+      </div>
+
+      <form id="edit-post-form">
+        <div class="form-content">
+          <input type="hidden" name="post-id" value="{{post.id}}" >
+          <label>Title</label>
+          <input id="title" name="title" value="{{post.title}}">
+
+          <label>Content</label>
+          <textarea id="content" name="content">{{post.content}}</textarea>
+        </div>
+        <button type="submit" class="btn">Update Post</button>
+        <button type="button" id="delete-post" class="btn">Delete Post</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="/js/editPost.js"></script>
