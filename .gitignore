@@ -1,9 +1,6 @@
 # MacOS
 .DS_Store
 
-# Package lock file
-package-lock.json
-
 # node modules
 node_modules
 

@@ -1,49 +1,37 @@
-# [Incomplete CMS Tech Blog
+# A Simple Tech Blog
 
-## Status
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-This project is currently in the work. 
+## Description 
 
-I don't feel very competent to finish this assignment at the moment. I would take a couple days to review the course materials and get a better grasp on the knowledge before I start working on this project as I want to make sure I understand the code, instead of blindly copying the example files. 
+This online application is a tech-related CMS-style blog site where users can view and create blog posts, as well as comment on other developer's posts. Any user can view all blog posts on the site, however only registered users are allowed to comment. Hope this blog site will open a welcoming space to people passion about technology.
 
-(12/22) 
+## Table of Contents 
+
+* [Installation](#installation) 
+
+* [Usage](#Usage) 
+
+* [License](#license) 
+
+* [Contribution](#contribution) 
+
+* [Questions](#questions) 
+
+## Installation 
+
+## Usage 
 
 
 
-user
+## License 
 
-post 
--> belongs to user
--> has many comments 
+GNU General Public License v3.0
 
-comments 
--> belongs to user and post
+## Contribution
 
+If you would like to contribute to this application, please reach out to the owner via email first. You can find the owner's email listed under the 'Questions' section below.  
 
------
-
-- homepage ['/']
-    - displays all blog posts (with post title and date created)
-
-- individual posts ['/post/:id] (can browse but can't comment if not logged in)
-  - includes post title, content, creator's username, date created. 
-  - below is option to leave a comment. 
-  - if a comment is submitted the page will refresh with the updated comment (with content, username, and created date)
-
-- login ['/login']
-    - enter exsiting username and password 
-    - if successful, login session would start 
-
-_____________incomplete____________
-
-- dashboard ['/dashboard'](redirect to login if not logged in)
-  - display all posts that I have created (title) with option to add posts
-
-  - clicking on a post --> edit post ['/dashboard/edit/:id]
-    - can update or delete post 
-  
-  - add w new post --> new post ['/dashboard/new']
-
-- signup ['/signup']
-    - enter username and password 
-    - saved and login session will begin 
+## Questions 
+If you have any questions about the repo, open an issue or contact me directly at stephanietseng113@gmail.com. 
+You can find more of my work at [wytseng](https://github.com/wytseng).
