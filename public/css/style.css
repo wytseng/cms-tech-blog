@@ -5,6 +5,10 @@
   --teal: #9ad4d6;
 }
 
+/*  --------------------- */
+/* |   GENERAL STYLING  | */
+/* ---------------------  */
+
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -24,18 +28,28 @@ p {
   margin: 0.5em 0;
 }
 
-nav {
-  display: flex;
-  align-items: center;
+/*  --------------------- */
+/* |     NAVIGATION     | */
+/* ---------------------  */
+
+.topnav {
+  overflow: hidden;
+  position:relative;
   padding: 1em;
   background-color: var(--dark);
   font-weight: bold;
   font-family: "Exo 2", sans-serif;
 }
 
-nav a {
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
   font-size: 1.2em;
-  color: var(--teal);
+  color: white;
+  padding: 7px 8px;
+  display: block;
 }
 
 ul {
@@ -44,6 +58,24 @@ ul {
   list-style-type: none;
   margin-block: 0;
 }
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  color: var(--teal);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.5em;
+}
+
+.icon i {
+  font-size: 1.5em;
+}
+
+/*  ----------------------- */
+/* |  SITE WIDE STYLING   | */
+/* -----------------------  */
 
 .page-wrapper {
   margin: 2em 1em;
@@ -56,13 +88,50 @@ ul {
   align-items: center;
 }
 
-.new-post .btn {
-  position: absolute;
-  bottom: 1em;
-  padding: 0.5em 1em;
-  left: 50%;
-  transform: translate(-50%, 0);
+.section-container {
+  width: 80%;
+  border: 4px solid var(--dark);
+  border-radius: 20px;
+  margin-bottom: 2em;
 }
+
+.card-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  color: var(--teal);
+  background-color: var(--dark);
+  border-radius: 10px 10px 0 0;
+}
+
+.post-title {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.2em;
+}
+
+.post-content {
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+/*  ----------------------- */
+/* |    SIGNUP & LOGIN    | */
+/* -----------------------  */
+
+.alt-link {
+  padding: 0.5em;
+}
+
+.alt-link a {
+  font-family: "Exo 2";
+  color: var(--purple);
+}
+
+/*  ----------------------- */
+/* | HOMEPAGE & DASHBOARD | */
+/* -----------------------  */
 
 .blog-container {
   width: 80%;
@@ -79,32 +148,17 @@ ul {
   margin-bottom: 0.5em;
 }
 
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.new-post .btn {
+  position: absolute;
+  bottom: 1em;
   padding: 0.5em 1em;
-  color: var(--teal);
-  background-color: var(--dark);
-  border-radius: 10px 10px 0 0;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
-.post-title {
-  font-family: "Exo 2", sans-serif;
-  font-size: 1.2em;
-}
-
-.section-container {
-  width: 80%;
-  border: 4px solid var(--dark);
-  border-radius: 20px;
-  margin-bottom: 2em;
-}
-
-.post-content {
-  padding: 0.5em 1em;
-  text-align: left;
-}
+/*  ----------------------- */
+/* |  SINGLE POST PAGE    | */
+/* -----------------------  */
 
 .created-by {
   text-align: right;
@@ -120,18 +174,15 @@ ul {
   font-style: italic;
 }
 
-.form-body {
-  padding: 1em;
-}
-
-/*  --------------  */
-/* | form related | */
-/*  --------------  */
+/*  -------------------- */
+/* |       FORMS       | */
+/* --------------------  */
 
 form {
   padding-top: 1em;
   width: 85%;
   margin: auto;
+  font-family: "Exo 2", sans-serif;
 }
 
 .form-content {
@@ -143,10 +194,6 @@ input, textarea {
   padding: 0.5em;
   box-sizing: border-box;
   font-family: "Lato",sans-serif;
-}
-
-label {
-  font-family: "Exo 2", sans-serif;
 }
 
 textarea {
@@ -165,11 +212,37 @@ button.btn {
   text-align: center;
 }
 
-.alt-link {
-  padding: 0.5em;
+/*  ----------------------- */
+/* |  RESPONSIVE DESIGN   | */
+/* -----------------------  */
+
+@media screen and (min-width: 769px) {
+  .login-container {
+    width: 60%;
+  }
 }
 
-.alt-link a {
-  font-family: "Exo 2";
-  color: var(--purple);
+@media screen and (min-width: 1025px) {
+  .login-container {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .topnav {
+    display: flex;
+    align-items: center;
+  }
+
+  .topnav a.icon {
+    display: none;
+  }
+
+  .topnav #myLinks {
+    display: flex;
+  }
+
+  .topnav a {
+    color: var(--teal);
+  }
 }

@@ -14,13 +14,18 @@
 <body>
 
   <header>
-    <nav> 
+    <nav class="topnav">
       <span style="color:#9ad4d6"><i class="fa-brands fa-blogger fa-3x"></i></span>
-      <ul>
+      <!-- Navigation links (hidden by default) -->
+      <ul id="myLinks">
         <li><a href="/">HOME</a></li>
         <li><a href="/dashboard">DASHBOARD</a></li>
         <li><a href="#" id="logout-link">LOGOUT</a></li>
       </ul>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa-solid fa-bars"></i>
+      </a>
     </nav>
   </header>
 
@@ -29,6 +34,16 @@
   </main>
 
   <script src="/js/logout.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
 </body>
 
 </html>

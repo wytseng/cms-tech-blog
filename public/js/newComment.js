@@ -5,14 +5,19 @@ const commentFormHandler = async(event) => {
   const content = document.querySelector('textarea[name="comment-body"]').value;
 
   if (content) {
-    await fetch("/api/comment", {
+    const response = await fetch("/api/comment", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ postId, content })
     });
-    document.location.reload();
+
+    if (!response.redirected) {
+      document.location.reload();
+    } else {
+      document.location.replace('/login');
+    }
   }
 }
 
